@@ -8,9 +8,12 @@ import { Navbar, Footer, Sidebar, ThemeSettings } from './components';
 import { Ecommerce, Orders, Calendar, Employees, Stacked, Pyramid, Customers, Kanban, Line, Area, Bar, Pie, Financial, ColorPicker, ColorMapping, Editor } from './pages';
 import './App.css';
 
-const App = () => {
+import { useStateContext } from './contexts/ContextProvider';
 
-  const activeMenu = true;
+
+const App = () => {
+ 
+  const {activeMenu} = useStateContext();
 
   return (
     <div>
